@@ -8,6 +8,7 @@ export const verifyName = async (
     res: Response,
     next: NextFunction
 ): Promise<void> => {
+    if (!req.body.name) return next();
     const nameIsTrue: Movie | null = await movieRepo.findOneBy({
         name: req.body.name,
     });

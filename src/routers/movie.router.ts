@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { pagination } from "../middlewares/pagination.middleware";
-import { verifyName } from "../middlewares/verifyNameExists.middleware";
+import { verifyName } from "../middlewares/verifyName.middleware";
 import moviesControllers from "../controllers/movies.controllers";
 import validateBody from "../middlewares/validateBody.middleware";
 import { movieCreateSchema, movieUpdateSchema } from "../schemas/movie.schema";
