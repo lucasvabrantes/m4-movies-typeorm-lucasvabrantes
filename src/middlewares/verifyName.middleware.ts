@@ -12,8 +12,6 @@ export const verifyName = async (
     const nameIsTrue: Movie | null = await movieRepo.findOneBy({
         name: req.body.name,
     });
-
-    console.log(nameIsTrue);
     if (nameIsTrue) {
         throw new AppError("Movie already exists.", 409);
     }
